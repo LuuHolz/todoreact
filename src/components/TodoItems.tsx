@@ -1,14 +1,21 @@
-// import IconCheck from "../assets/check.svg";
-// import IconError from "../assets/error.svg";
+import { BsCheckLg } from "react-icons/bs";
+import { BsXLg } from "react-icons/bs";
 
-const TodoItems = ({text, completed}: {text:string, completed:boolean}) => {
+type Props = {
+  text: string;
+  completed: boolean;
+  onCompleted: () => void;
+  onDelete: () => void;
+}
+
+const TodoItems = ({text, completed, onCompleted, onDelete}: Props) => {
   return (
     <div className="containerTodoItem">
       <li className="liTodoItem">
                               {/* CLASES DINAMICAS */}
-        <span className={`icon iconCheck ${completed && "iconCheckActive "}`}>V</span>
+        <span onClick={onCompleted} className={`icon iconCheck ${completed && "iconCheckActive "}`}><BsCheckLg /></span>
         <p className={`textTodoItem ${completed && "textComplete"}`}>{text}</p>
-        <span className="iconDelete icon">X</span>
+        <span onClick={onDelete} className="icon iconDelete"><BsXLg /></span>
       </li>
     </div>
   );

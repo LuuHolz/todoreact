@@ -1,10 +1,15 @@
 
+
 const TodoButton = () => {
+  
+
   return (
     <div className="buttonContaier">
-        <button className="buttonAdd">+</button>
+      <button onClick={() => console.log("hola")} className="buttonAdd">
+        +
+      </button>
     </div>
-  )
-}
+  );
+};
 
-export {TodoButton}
+export { TodoButton };
