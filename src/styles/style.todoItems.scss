@@ -1,0 +1,56 @@
+.containerTodoItem {
+  .liTodoItem {
+    background-color: $color-basic;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 24px;
+    box-shadow: 0px 5px 50px $color-grey;
+  }
+
+  .textTodoItem {
+    margin: 24px 0 24px 24px;
+    width: calc(100% - 120px);
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 400;
+  }
+
+  .textComplete {
+    text-decoration: line-through;
+  }
+
+  .icon {
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 48px;
+    width: 48px;
+    font-size: 24px;
+    font-weight: bold;
+    background-color: $color-grey;
+  }
+
+  .iconCheck {
+    position: absolute;
+    left: 12px;
+  }
+  .iconCheckActive {
+    color: $color-check;
+    border-radius: 50%;
+  }
+
+  .iconDelete {
+    position: absolute;
+    top: -24px;
+    right: 0;
+    color: $color-basic;
+    border-radius: 50%;
+  }
+
+  .iconDelete:hover {
+    color: $color-error;
+  }
+}
