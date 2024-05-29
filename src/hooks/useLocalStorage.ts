@@ -1,11 +1,24 @@
-import React from 'react'
+import React, { useState } from "react";
 
-const useLocalStorage = () => {
+const UseLocalStorage = (itemName, initialValue) => {
+  const localStorageItem = localStorage.getItem(itemName);
+  let parseItem;
 
-    
-  return {
-
+  if (!localStorageItem) {
+    localStorage.getItem(itemName, JSON.stringify(initialValue));
+    parseItem = [];
+  } else {
+    parseItem = JSON.parse(localStorageItem);
   }
-}
 
-export default useLocalStorage
+  const [item, setItem] = useState(parseItem);
+
+  //ACTUALIZA ESTADO Y LOCALSTORAGE
+  const saveItem = (newItem) => {
+    localStorage.setItem(itemName, JSON.stringify(newItem));
+    setItem(newItem);
+  };
+  return  [item, saveItem];
+};
+
+export { UseLocalStorage };
