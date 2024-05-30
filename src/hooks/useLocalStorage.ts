@@ -26,9 +26,9 @@ const UseLocalStorage = ({itemName, initialValue}: {itemName: string; initialVal
           setLoading(false);
         } catch(error){
           setLoading(false);
-          setError(true);
+          setError(false);
       }
-    }, 1000);
+    }, 2000);
 
   }, []);
 

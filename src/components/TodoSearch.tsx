@@ -1,6 +1,5 @@
 
-
-const TodoSearch = ({searchValue, setSearchValue}: {searchValue:string; setSearchValue: React.Dispatch<React.SetStateAction<string>> }) => {
+const TodoSearch = ({searchValue, setSearchValue}: {searchValue:string; setSearchValue: (value: string) => void}) => {
 
   return (
     <div className="todoSearchContainer">
