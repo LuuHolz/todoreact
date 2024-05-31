@@ -1,0 +1,15 @@
+.emptyContainer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 100px;
+
+    .textEmptyTodo{
+        color: $color-text;
+        font-size: 18px;
+        text-align: center;
+        margin: 0;
+        padding: 48px;
+        font-weight: normal;
+    }
+}

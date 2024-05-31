@@ -1,5 +1,9 @@
+import React from "react";
+import { TodoContex } from "../context/TodoContex";
 
-const TodoSearch = ({searchValue, setSearchValue}: {searchValue:string; setSearchValue: (value: string) => void}) => {
+const TodoSearch = () => {
+
+  const {searchValue, setSearchValue} = React.useContext(TodoContex);
 
   return (
     <div className="todoSearchContainer">

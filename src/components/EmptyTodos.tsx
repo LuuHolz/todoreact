@@ -1,9 +1,11 @@
-import React from 'react'
+import React from "react";
 
 const EmptyTodos = () => {
   return (
-    <p>Crea tu primer Todo</p>
-  )
-}
+    <div className="emptyContainer">
+      <p className="textEmptyTodo">Crea tu primer Todo</p>
+    </div>
+  );
+};
 
-export {EmptyTodos}
+export { EmptyTodos };
