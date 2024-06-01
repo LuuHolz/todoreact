@@ -50,11 +50,9 @@
     position: absolute;
     top: -24px;
     right: 0;
-    color: $color-basic;
+    color: $color-error;
     border-radius: 50%;
   }
 
-  .iconDelete:hover {
-    color: $color-error;
-  }
+
 }
