@@ -1,11 +1,10 @@
 
-
-const TodoButton = () => {
+const TodoButton = ({setShowModal}) => {
   
 
   return (
     <div className="buttonContaier">
-      <button onClick={() => console.log("hola")} className="buttonAdd">
+      <button onClick={() => setShowModal(state => !state)} className="buttonAdd">
         +
       </button>
     </div>

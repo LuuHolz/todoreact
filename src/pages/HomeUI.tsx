@@ -7,10 +7,15 @@ import { TodoItems } from "../components/TodoItems";
 import { TodosError } from "../components/TodosError";
 import { TodosLoading } from "../components/TodosLoading";
 import { EmptyTodos } from "../components/EmptyTodos";
+import { Modal } from "../components/Modal";
+import { TodoForm } from "../components/TodoForm";
 import { TodoContex } from "../context/TodoContex";
 
+
 const HomeUI = () => {
-  const { loading, error, searchTodos, completeTodo, deleteTodo } = React.useContext(TodoContex);
+
+  const { loading, error, searchTodos, completeTodo, deleteTodo, showModal, setShowModal } =
+    React.useContext(TodoContex);
 
   return (
     <div className="homeContainer">
@@ -31,7 +36,14 @@ const HomeUI = () => {
           />
         ))}
       </TodoList>
-      <TodoButton />
+
+      <TodoButton setShowModal={setShowModal}/>
+
+      {showModal && (
+        <Modal>
+          <TodoForm/>
+        </Modal>
+      )}
     </div>
   );
 };

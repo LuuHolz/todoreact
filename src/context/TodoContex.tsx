@@ -17,18 +17,23 @@ type Props = {
   searchTodos: Todo[];
   completeTodo: (text: string) => void;
   deleteTodo: (text: string) => void;
+  showModal: boolean;
+  setShowModal: (value: boolean) => void;
 };
 
 
 const TodoContex = React.createContext<Props | undefined>(undefined);
 
 function TodoProvider({ children }: { children: ReactNode }){
-    const [searchValue, setSearchValue] = useState<string>("");
 
+
+    const [searchValue, setSearchValue] = useState<string>("");
     const { item: todos = [], saveItem: saveTodos, loading, error } = UseLocalStorage("TODOS_V1", []);
+    const [showModal, setShowModal] = useState(false);
   
     const completedTodos = todos.filter((todo) => todo.completed).length;
     const totalTodos = todos.length;
+
     const searchTodos = todos.filter((todo) => {
       const todoText = todo.text.toLowerCase();
       const searchText = searchValue.toLowerCase();
@@ -56,7 +61,9 @@ function TodoProvider({ children }: { children: ReactNode }){
             setSearchValue, 
             searchTodos,
             completeTodo,
-            deleteTodo}}>
+            deleteTodo,
+            showModal,
+            setShowModal}}>
             {children}
         </TodoContex.Provider>
       );

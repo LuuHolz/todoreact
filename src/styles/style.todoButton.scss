@@ -5,7 +5,7 @@
         border: none;
         border-radius: 50%;
         cursor: pointer;
-        font-size: 50px;
+        font-size: 40px;
         position: fixed;
         bottom: 24px;
         right: 24px;
@@ -16,6 +16,7 @@
         align-items: center;
         height: 64px;
         width: 64px;
+        z-index: 1;
 
         transform: rotate(0);
         transition: .3s ease;

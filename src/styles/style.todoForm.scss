@@ -1,0 +1,68 @@
+.formContainer {
+  width: 90%;
+  max-width: 300px;
+  background-color: $color-basic;
+  padding: 33px 40px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  .labelForm {
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+    color: $color-text;
+    margin-bottom: 26px;
+  }
+
+  .textAreaForm {
+    background-color: $color-basic;
+    border: 2px solid $color-grey;
+    border-radius: 2px;
+    box-shadow: 0px 5px 50px $color-shadow;
+    color: $color-text;
+    font-size: 20px;
+    text-align: center;
+    padding: 12px;
+    height: 96px;
+    width: calc(100% - 25px);
+  }
+
+  .textAreaForm::placeholder {
+    color: $color-grey;
+    height: 400;
+  }
+
+  .textAreaForm:focus {
+    outline-color: $color-botones;
+  }
+
+  .btnsContainer {
+    margin-top: 14px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+
+    .btnTodoForm {
+      cursor: pointer;
+      display: inline-block;
+      font-size: 20px;
+      color: $color-text;
+      font-weight: 400;
+      width: 120px;
+      height: 48px;
+      border-radius: 2px;
+      border: none;
+    }
+
+    .btnCancel-TodoForm {
+      background: transparent;
+    }
+
+    .btnAdd-TodoForm {
+      background-color: $color-botones;
+      box-shadow: 0px 5 px 25px $color-shadow;
+    }
+  }
+}
