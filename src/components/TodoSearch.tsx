@@ -10,7 +10,7 @@ const TodoSearch = () => {
       <input
         type="text"
         className="todoSearch"
-        placeholder="Agrega una tarea pendiente"
+        placeholder="Comprar pan"
         value={searchValue}
         onChange={(e) => setSearchValue(e.target.value)}
       />

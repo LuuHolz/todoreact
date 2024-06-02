@@ -34,6 +34,7 @@ const TodoForm = () => {
         className="textAreaForm"
         value={newTodoValue}
         onChange={onChange}
+        required
       ></textarea>
 
       <div className="btnsContainer">
